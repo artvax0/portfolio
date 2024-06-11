@@ -1,0 +1,268 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-size: 1.2rem;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+/* Header and Nav */
+header nav {
+    width: 100vw;
+    max-width: 100%;
+    height: 50px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    gap: 120px;
+    /* padding: 0 400px; */
+    box-shadow: 0 0 10px rgb(124, 124, 124);
+}
+
+header nav .logo {
+    text-decoration: none;
+    line-height: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav .logo>img[alt="Logo"] {
+    width: 50px;
+    padding: 5px;
+}
+
+header nav .links ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 50px;
+}
+
+header nav .links ul li {
+    width: 80px;
+    text-align: center;
+}
+
+header nav .links ul li a {
+    text-decoration: none;
+    color: #838383;
+}
+
+header nav .links ul li a:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Main Content - Page Introductions */
+
+main {
+    width: 100vw;
+    max-width: 100%;
+}
+
+main #intro .pageIntroduction {
+    height: 400px;
+    background-image: url(../images/abstractBgnByJasonDent.jpg);
+    background-size: cover;
+}
+
+main #intro .pageIntroduction .introductionContainer {
+    background: linear-gradient(-45deg, #d86ceece, #767eebd3, #5ce2ebd2, #56dd93d5);
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main #intro .pageIntroduction .introductionContainer .pageInfo {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 650;
+    color: #0e0e0e;
+}
+
+main #intro .pageIntroduction .introductionContainer .pageInfo p {
+    text-align: center;
+}
+
+main #intro .pageIntroduction .introductionContainer .controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main #intro .pageIntroduction .introductionContainer .controls a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #42ad72;
+    border-radius: 20px;
+    width: 200px;
+    padding: 3px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #intro .skillsList {
+    height: 75px;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main #intro .skillsList img {
+    width: 50px;
+}
+
+/* Page Preview */
+
+main .previewContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3em 0;
+}
+
+main .previewContainer .previewWrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .previewContainer .previewWrapper img {
+    max-width: 100%;
+    display: block;
+    box-shadow: 0px 0px 20px #bbb;
+}
+
+/* Footer */
+
+footer {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #fff;
+    background-color: #338a5a;
+    border-top: 2px solid #fff;
+}
+
+/* Extra Styling */
+
+.hoverGradient:hover {
+    background: linear-gradient(-60deg, #d86ceece, #767eebd3, #5ce2ebd2, #56dd93d5);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    /* Navbar */
+    nav a img[alt~="Name"],
+    .links {
+        display: none;
+    }
+
+    header nav,
+    header nav .links ul li {
+        border-bottom: 2px solid #000;
+        box-shadow: 0 5px 5px #00000075;
+    }
+
+    header nav {
+        padding: 0;
+        display: block;
+        position: fixed;
+    }
+
+    header nav a.logo {
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    header nav a img[alt="Logo"] {
+        padding-right: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header nav .hamburger:hover~.links {
+        display: block;
+    }
+
+    header nav .links ul {
+        display: block;
+    }
+
+    header nav .links ul li {
+        width: 100%;
+        height: 50px;
+        background-color: #e7e7e7;
+        line-height: 2.25;
+    }
+
+    header nav .links ul li a {
+        color: #000;
+    }
+
+    /* Introduction */
+    .pageInfo {
+        padding: 0 25px;
+    }
+}

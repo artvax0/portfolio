@@ -1,0 +1,26 @@
+.branding {
+    
+    @include desktop {
+        width: 40%;
+    }
+
+    .outline {
+        background-color: $primaryColor;
+        height: 10px;
+        width: 85%;
+
+        @include desktop {
+            width: 50%;
+            height: 20px;
+        }
+    }
+
+    .logoContainer {
+        width: 100%;
+        padding: 50px 150px;
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

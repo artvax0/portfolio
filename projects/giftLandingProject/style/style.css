@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    /* padding: 0 !important; */
+    box-sizing: border-box;
+}
+
+div.container-fluid {
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+}
+
+h1 {
+    font: normal normal normal 160px/231px Satisfy !important;
+}
+
+h2 {
+    font: normal normal normal 32px/38px "Varela Round" !important;
+}
+
+p {
+    font: normal normal normal 16px/20px "Varela Round";
+}
+
+label,
+input {
+    font: normal normal normal 16px/20px Varela Round;
+}
+
+input {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    height: 50px;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font: normal normal normal 60px/86px Satisfy !important;
+    }
+
+    h2 {
+        font: normal normal normal 18px/22px Varela Round !important;
+    }
+
+    label,
+    input {
+        font: normal normal normal 10px/12px Varela Round;
+    }
+
+    input {
+        height: 35px;
+    }
+
+    input[type="submit"] {
+        font: normal normal normal 11px/13px Varela Round;
+        color: #2823FD;
+    }
+}

@@ -1,0 +1,132 @@
+main #contact {
+    width: 100%;
+    background-color: #444;
+    .contact {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        @include tablet {
+            flex-direction: column-reverse;
+        }
+
+        .contactForm {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 100px;
+            gap: 10px;
+
+            @include tablet {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .contactDesc {
+                h2 {
+                    color: #fff;
+                }
+                p {
+                    @extend h2;
+                    font-weight: normal;
+                }
+            }
+            .contactInput {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .formControl {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: $fontSizeNormal;
+                    }
+                    input {
+                        border: none;
+                        border-bottom: 3px solid $backgroundColor;
+                        font-family: $fontFamilyForm;
+                        height: 40px;
+                        font-size: $fontSizeForm;
+                        font-weight: normal;
+                    }
+                    textarea {
+                        @extend input;
+                        height: 125px;
+                        resize: none;
+                    }
+                }
+                
+                // Submit Button
+                input[type="submit"] {
+                    border: none;
+                    font-family: $fontFamilyNormal;
+                    font-size: $fontSizeNormal;
+                    font-weight: $fontWeightRegular;
+                    width: 200px;
+                    background-color: $backgroundColor;
+                    color: #fff;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    &:hover {
+                        @include hoverGradient;
+                    }
+            }
+        }
+            
+            
+        }
+        .imgContainer {
+            width: 50%;
+            img {
+                max-width: 100%;
+
+                @include tablet {
+                    max-width: 40%;
+                }
+            }
+
+            @include tablet {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+    .contactList {
+        background-color: $backgroundColor;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 10px 0;
+
+        @include tablet {
+            width: 100%;
+            margin-top: 25px;
+            padding: 10px 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contactContainer {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: $fontSizeContact;
+            font-weight: normal;
+            gap: 5px;
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+    }
+}

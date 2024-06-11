@@ -1,0 +1,102 @@
+// Variables
+
+$fontSizeNormal: 1.2rem;
+$fontFamilyNormal: "Teko", sans-serif;
+$fontFamilyForm: Arial, sans-serif;
+$fontWeightRegular: 450;
+$fontSizeForm: 0.9rem;
+$fontSizeContact: 0.7rem;
+// backgroundColor used as Form Bottom Border
+$backgroundColor: #42ad72;
+$gradientC1: #d86ceece;
+$gradientC2: #767eebd3;
+$gradientC3: #5ce2ebd2;
+$gradientC4: #56dd93d5;
+
+// General Modules
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-family: $fontFamilyNormal;
+    font-size: $fontSizeNormal;
+    font-weight: $fontWeightRegular;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+dl {
+    list-style-type: none;
+}
+
+main {
+    width: 100vw;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 650;
+    color: #0e0e0e;
+    font-family: $fontFamilyNormal;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: $fontFamilyNormal;
+}
+
+span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0a9270;
+}
+
+@mixin hoverGradient {
+    background: linear-gradient(-60deg, #d86ceece, #767eebd3, #5ce2ebd2, #56dd93d5);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin mobile {
+    @media (max-width: 576px) { 
+        @content;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin tablet {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}

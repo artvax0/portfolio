@@ -1,0 +1,201 @@
+header {
+    background-color: #0EE1E1;
+}
+
+.msgContainer {
+    display: none;
+}
+
+.contentContainer h1 {
+    font: normal normal 900 33px/49px Heebo;
+}
+
+.contentContainer p {
+    font: normal normal normal 15px/22px Heebo;
+    text-align: justify;
+}
+
+.imgContainer img {
+    width: auto;
+    height: 75px;
+}
+
+.flashcard {
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.flashcard:hover {
+    box-shadow: 0 0 15px #ddd;
+    border-radius: 15px;
+}
+
+.flashcard .iconContainer img {
+    width: 95px;
+}
+
+.flashcard .iconContainer img[src$="Icon.png"] {
+    display: block;
+}
+
+.flashcard .iconContainer img[src$="Hover.png"] {
+    display: none;
+}
+
+.flashcard:hover .iconContainer img[src$="Icon.png"] {
+    display: none;
+}
+
+.flashcard:hover .iconContainer img[src$="Hover.png"] {
+    display: block;
+}
+
+.cardContent h2 {
+    font: normal normal 900 22px/32px Heebo;
+    color: #0EE1E1;
+}
+
+.cardContent p,
+.formContainer .formContent p {
+    font: normal normal normal 15px/22px Heebo;
+}
+
+.formContainer {
+    background: #F0FFFF 0% 0% no-repeat padding-box;
+}
+
+.formContainer .formContent h2 {
+    font: normal normal 900 32px/47px Heebo;
+}
+
+.formContainer .formContent p {
+    text-align: justify;
+}
+
+label {
+    font: normal normal bold 12px/18px Heebo;
+    color: #2C2C2C;
+}
+
+input,
+textarea {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0;
+    border-bottom: 3px solid #0EE1E1;
+}
+
+textarea {
+    resize: none !important;
+}
+
+input[type="submit"] {
+    background: #0EE1E1 0% 0% no-repeat padding-box;
+    font: normal normal bold 13px/19px Heebo;
+    color: #000;
+}
+
+.mapContainer {
+    background: #0EE1E1 0% 0% no-repeat padding-box;
+}
+
+.mapContainer img {
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.contactInfo a {
+    background-color: #0EE1E1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.contactInfo a:hover {
+    box-shadow: 0 0 15px #bbb;
+}
+
+.contactInfo a img {
+    width: 100%;
+    display: block;
+}
+
+.footerBar {
+    background-color: #0EE1E1;
+}
+
+@media (min-width: 768px) {
+
+    .msgContainer {
+        display: block;
+    }
+
+    .msgContainer a {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .msgContainer a img {
+        width: 100%;
+        display: block;
+    }
+
+    .msgContainer a:hover {
+        box-shadow: 0 0 15px #aaa;
+    }
+
+    .imgContainer img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contentContainer h1 {
+        font: normal normal 900 66px/97px Heebo;
+    }
+
+    .contentContainer p {
+        font: normal normal normal 20px/29px Heebo;
+    }
+
+    .cardContent h2 {
+        font: normal normal 900 30px/44px Heebo;
+    }
+
+    .cardContent p,
+    .formContent p {
+        font: normal normal normal 15px/22px Heebo;
+    }
+
+    .formContent h2 {
+        font: normal normal 900 46px/67px Heebo;
+    }
+
+    .formControl label {
+        font: normal normal bold 13px/19px Heebo;
+    }
+
+    input,
+    textarea {
+        background: #E5EEFF 0% 0% no-repeat padding-box;
+    }
+
+    input[type="submit"] {
+        background: #0EE1E1 0% 0% no-repeat padding-box;
+        font: normal normal bold 20px/28px Heebo;
+        width: 100%;
+        line-height: 2;
+    }
+
+    .contactInfo a {
+        width: 75px;
+        height: 75px;
+    }
+
+    .contactInfo a img {
+        width: 75%;
+    }
+}

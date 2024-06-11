@@ -1,0 +1,571 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-size: 1.2rem;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+/* Header and Nav */
+header nav {
+    width: 100vw;
+    max-width: 100%;
+    height: 50px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    gap: 120px;
+    /* padding: 0 400px; */
+    box-shadow: 0 0 10px rgb(124, 124, 124);
+}
+
+header nav .logo {
+    text-decoration: none;
+    line-height: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav .logo>img[alt="Logo"] {
+    width: 50px;
+    padding: 5px;
+}
+
+header nav .links ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 50px;
+}
+
+header nav .links ul li {
+    width: 80px;
+    text-align: center;
+}
+
+header nav .links ul li a {
+    text-decoration: none;
+    color: #838383;
+}
+
+header nav .links ul li a:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* Main Content - Page Introductions */
+
+main {
+    width: 100vw;
+    max-width: 100%;
+}
+
+main #intro .pageIntroduction {
+    height: 400px;
+    background-image: url(../images/abstractBgnByJasonDent.jpg);
+    background-size: cover;
+}
+
+main #intro .pageIntroduction .introductionContainer {
+    background: linear-gradient(-45deg, #d86ceece, #767eebd3, #5ce2ebd2, #56dd93d5);
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main #intro .pageIntroduction .introductionContainer .pageInfo {
+    margin-top: 50px;
+    width: 1100px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 650;
+    color: #0e0e0e;
+    text-align: center;
+}
+
+main #intro .pageIntroduction .introductionContainer .pageInfo p {
+    text-align: center;
+}
+
+main #intro .skillsList {
+    height: 75px;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main #intro .skillsList img {
+    width: 50px;
+}
+
+/* Main Content - About Me */
+
+main #about>div {
+    width: 100%;
+    background: #ddd;
+    box-shadow: inset 0 0 10px 0 rgb(124, 124, 124);
+    display: flex;
+}
+
+main #about div .aboutInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 150px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h2 span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(10, 146, 112);
+}
+
+main #about div .aboutInfo p {
+    line-height: 1.75;
+    padding: 20px 0;
+    text-align: justify;
+}
+
+main #about div .aboutInfo a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42ad72;
+    border-radius: 20px;
+    width: 200px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #about div .aboutInfo a:active {
+    background-color: #6fe9f1;
+}
+
+main #about div .aboutPicture {
+    width: 40%;
+}
+
+main #about div .aboutPicture img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+main #about div .aboutPicture img[src*="Mobile"] {
+    display: none;
+}
+
+/* Main Content - Gallery Projects */
+
+main #gallery {
+    width: 100%;
+    max-width: 100%;
+    background-color: #e7e7e7;
+    padding: 30px;
+}
+
+main #gallery .galleryInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    gap: 5px;
+}
+
+main #gallery .galleryCards {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+main #gallery .galleryCards .card {
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px #a5a5a577;
+}
+
+main #gallery .galleryCards .card:hover {
+    box-shadow: 0 5px 15px #53535398;
+}
+
+.galleryCards .card .projectTh {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.galleryCards .card .cardInfo {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.galleryCards .card .cardInfo .projectDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galleryCards .card .cardInfo .projectDesc p {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+}
+
+.galleryCards .card .cardInfo .projectSkills {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.galleryCards .card .cardInfo .projectSkills img {
+    width: 15px;
+    height: 15px;
+}
+
+.galleryCards .card .cardInfo a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #42ad72;
+    padding: 5px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+/* Main Content - Contact */
+
+main #contact {
+    width: 100%;
+    background-color: #444;
+}
+
+main #contact .contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main #contact .contact .contactForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    gap: 10px;
+}
+
+main #contact .contact .contactForm .contactDesc h2,
+main #contact .contact .contactForm .contactDesc p {
+    color: #fff;
+}
+
+main #contact .contact .contactForm .contactDesc p {
+    font-weight: normal;
+}
+
+main #contact .contact .contactForm .contactInput {
+    display: flex;
+    flex-direction: column;
+}
+
+main #contact .contact .contactForm .contactInput label {
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+main #contact .contact .contactForm .contactInput input {
+    border: none;
+    border-bottom: 3px solid #42ad72;
+    font-family: Arial, sans-serif;
+    height: 40px;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+main #contact .contact .contactForm .contactInput label[class="message"]+input {
+    height: 125px;
+}
+
+main #contact .contact .contactForm a {
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    background-color: #42ad72;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+main #contact .contact .imgContainer {
+    width: 50%;
+}
+
+main #contact .contact .imgContainer img {
+    max-width: 100%;
+}
+
+main #contact .contactList {
+    background-color: #42ad72;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 0;
+}
+
+main #contact .contactList .contactContainer {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: normal;
+    gap: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer */
+
+footer {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    color: #fff;
+    background-color: #338a5a;
+    border-top: 2px solid #fff;
+}
+
+/* Extra Styling */
+
+.hoverGradient:hover {
+    background: linear-gradient(-60deg, #d86ceece, #767eebd3, #5ce2ebd2, #56dd93d5);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main section #about .aboutInfo h2,
+main #contact .contact .contactForm .contactDesc h2 {
+    font-size: 3rem;
+}
+
+@media (max-width: 992px) {
+
+    /* Navbar */
+    nav a img[alt~="Name"],
+    .links {
+        display: none;
+    }
+
+    header nav,
+    header nav .links ul li {
+        border-bottom: 2px solid #000;
+        box-shadow: 0 5px 5px #00000075;
+    }
+
+    header nav {
+        padding: 0;
+        display: block;
+        position: fixed;
+    }
+
+    header nav a.logo {
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    header nav a img[alt="Logo"] {
+        padding-right: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav #hamburger:checked~.links {
+        display: block;
+    }
+
+    header nav .links ul {
+        display: block;
+    }
+
+    header nav .links ul li {
+        width: 100%;
+        height: 50px;
+        background-color: #e7e7e7;
+        line-height: 2.25;
+    }
+
+    header nav .links ul li a {
+        color: #000;
+    }
+
+    /* Introduction */
+    .pageInfo {
+        padding: 0 25px;
+    }
+
+    /* About Me */
+    main #about>div {
+        flex-direction: column-reverse;
+        padding: 30px 0;
+    }
+
+    main #about div .aboutPicture {
+        display: flex;
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+    }
+
+    main #about div .aboutPicture img {
+        display: block;
+        max-width: 350px;
+        height: auto;
+        padding: 15px 100px;
+    }
+
+    main #about div .aboutPicture img[src*="Mobile"] {
+        display: block;
+    }
+
+    main #about div .aboutPicture img[src*="aboutMe.png"] {
+        display: none;
+    }
+
+    main #about div .aboutInfo {
+        padding: 15px 30px;
+        width: 100%;
+        height: 80%;
+        align-items: center;
+    }
+
+    main #about div .aboutInfo h2 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    h2 span {
+        font-size: 2.2rem;
+    }
+
+    main #about div .aboutInfo p {
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    /* Project Gallery */
+    main #gallery .galleryCards {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Contact */
+    main #contact .contact {
+        flex-direction: column-reverse;
+    }
+
+    main #contact .contact .imgContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
+
+    main #contact .contact .imgContainer img {
+        max-width: 40%;
+    }
+
+    main #contact .contact .contactForm {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    main #contact .contactList {
+        width: 100%;
+        margin-top: 25px;
+        padding: 10px 20px;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

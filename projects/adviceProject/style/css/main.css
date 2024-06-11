@@ -1,0 +1,261 @@
+.formContainer form .formControl textarea, .formContainer form .formControl input {
+  border: none;
+  background: #E5EEFF 0% 0% no-repeat padding-box;
+  border-bottom: 3px solid #FDBD03;
+  height: 35px;
+}
+@media (min-width: 992px) {
+  .formContainer form .formControl textarea, .formContainer form .formControl input {
+    height: 50px;
+    border-bottom: 4px solid #FDBD03;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.messageContainer {
+  display: none;
+}
+
+.pageWrapper {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .mainContent {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .branding {
+    width: 40%;
+  }
+}
+.branding .outline {
+  background-color: #FDBD03;
+  height: 10px;
+  width: 85%;
+}
+@media (min-width: 992px) {
+  .branding .outline {
+    width: 50%;
+    height: 20px;
+  }
+}
+.branding .logoContainer {
+  width: 100%;
+  padding: 50px 150px;
+}
+.branding .logoContainer img {
+  display: block;
+  max-width: 100%;
+}
+
+.formContainer {
+  padding: 30px 25px;
+}
+@media (min-width: 992px) {
+  .formContainer .messageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 50px;
+  }
+  .formContainer .messageContainer a {
+    width: 75px;
+    height: 75px;
+    background-color: #FDBD03;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+  }
+  .formContainer .messageContainer a:hover {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6509803922);
+  }
+  .formContainer .messageContainer a img {
+    width: 100%;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .formContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.formContainer .formInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .formContainer .formInfo {
+    align-items: start;
+  }
+}
+.formContainer .formInfo h1 {
+  color: #FDBD03;
+  font: normal normal 900 40px/59px Heebo;
+}
+@media (min-width: 992px) {
+  .formContainer .formInfo h1 {
+    font: normal normal 900 66px/97px Heebo;
+  }
+}
+.formContainer .formInfo p {
+  color: #020253;
+  font: normal normal normal 15px/22px Heebo;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .formContainer .formInfo p {
+    font: normal normal normal 20px/29px Heebo;
+    width: 50%;
+    text-align: justify;
+  }
+}
+.formContainer form {
+  padding-top: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  .formContainer form {
+    padding-top: 25px;
+    padding-right: 150px;
+    align-items: start;
+    gap: 30px;
+  }
+}
+.formContainer form .basicFormInputWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  .formContainer form .basicFormInputWrapper {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+.formContainer form .formControl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.formContainer form .formControl label {
+  font: normal normal bold 10px/14px Heebo;
+}
+@media (min-width: 992px) {
+  .formContainer form .formControl label {
+    font: normal normal bold 16px/24px Heebo;
+  }
+}
+.formContainer form .formControl textarea {
+  height: 100px;
+  resize: none;
+}
+.formContainer form input[type=submit] {
+  background-color: #FDBD03;
+  border: none;
+  width: 100%;
+  font: normal normal bold 15px/21px Heebo;
+  height: 35px;
+  transition: all 0.2s ease-in-out;
+}
+.formContainer form input[type=submit]:hover {
+  background-color: #f1cf0f;
+}
+@media (min-width: 992px) {
+  .formContainer form input[type=submit] {
+    font: normal normal bold 22px/30px Heebo;
+    width: 20%;
+    height: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+footer .footerWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  footer .footerWrapper {
+    width: 60%;
+  }
+}
+footer .contactButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 0;
+}
+@media (min-width: 992px) {
+  footer .contactButtons {
+    justify-content: flex-end;
+    padding-right: 50px;
+    gap: 50px;
+    padding-bottom: 15px;
+  }
+}
+footer .contactButtons a {
+  width: 45px;
+  height: 45px;
+  background-color: #FDBD03;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+footer .contactButtons a:hover {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6509803922);
+}
+@media (min-width: 992px) {
+  footer .contactButtons a {
+    padding: 15px;
+    width: 75px;
+    height: 75px;
+  }
+}
+footer .contactButtons a img {
+  width: 100%;
+  display: block;
+}
+footer .outline {
+  background-color: #FDBD03;
+  width: 100%;
+  height: 10px;
+}
+@media (min-width: 992px) {
+  footer .outline {
+    height: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */

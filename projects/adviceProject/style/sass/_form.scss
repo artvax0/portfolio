@@ -1,0 +1,141 @@
+.formContainer {
+    padding: 30px 25px;
+
+    .messageContainer {
+        @include desktop {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px 50px;
+            
+            a {
+                width: 75px;
+                height: 75px;
+                background-color: $primaryColor;
+                border-radius: 50%;
+                padding: 5px;
+                box-shadow: 0 3px 6px $boxShadowColor;
+
+                &:hover {
+                    box-shadow: 0 3px 15px $boxShadowColorHover;
+                }
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include desktop {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formInfo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+            align-items: start;
+        }
+
+        h1 {
+            color: $primaryColor;
+            font: $fontHeadingMobile;
+
+            @include desktop {
+                font: $fontHeadingDesktop;
+            }
+        }
+
+        p {
+            color: $pColor;
+            font: $fontParagraphMobile;
+            text-align: center;
+
+            @include desktop {
+                font: $fontParagraphDesktop;
+                width: 50%;
+                text-align: justify;
+            }
+        }
+    }
+
+    form {
+        padding-top: 35px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+
+        @include desktop {
+            padding-top: 25px;
+            padding-right: 150px;
+            align-items: start;
+            gap: 30px;
+        }
+
+        .basicFormInputWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include desktop {
+                flex-direction: row;
+                gap: 30px;
+            }
+        }
+
+        .formControl {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label {
+                font: $fontFormLabelMobile;
+
+                @include desktop {
+                    font: $fontFormLabelDesktop;
+                }
+            }
+
+            input {
+                @extend %inputBox;
+            }
+
+            textarea {
+                @extend %inputBox;
+                height: 100px;
+                resize: none;
+            }
+        }
+
+        input[type="submit"] {
+            background-color: $primaryColor;
+            border: none;
+            width: 100%;
+            font: $fontFormSubmitMobile;
+            height: 35px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $primaryColorHover;
+
+            }
+
+            @include desktop {
+                font: $fontFormSubmitDesktop;
+                width: 20%;
+                height: 50px;
+            }
+        }
+    }
+}
