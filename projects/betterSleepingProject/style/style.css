@@ -52,6 +52,11 @@ header .headerContent h2 {
     font-family: Nunito;
 }
 
+header .headerContent .btnContainer {
+    width: 225px;
+    height: 60px;
+}
+
 header .headerContent a {
     background-color: #fff;
     /* Makes the font color be the same as the background */
@@ -61,12 +66,13 @@ header .headerContent a {
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 20px 50px;
     text-align: center;
-    width: 250px;
     border-radius: 50px;
-    /* box-shadow: 0 5px 5px #aaa; */
     transition: all ease-in-out 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 header .headerContent a:hover {
