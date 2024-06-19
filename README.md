@@ -9,6 +9,7 @@ It's purpose it so get to know me better through both my work and my hobbies.
 ## How it's made
 
 **Tech used:** HTML, CSS, SASS, Bootstrap  
+
 The project is built on a main _index.html_ file, using CSS and SASS extension language. This page has a functioning navigation bar which sends you to the corresponding areas in the page, an section to get to know me, a list of all my projects and a contact form.  
 Each project is integrated with a stylized card grid to provide information about each project, a thumbnail, and the technology used on said project. Each project card allows you to travel to a _pagePreview.html_ file which uses CSS to showcase a preview of the project before deciding if you want to download a .zip file of the project or enter the _index.html_ file of the project.  
 This portfolio uses animation and fluid colour changes to give a pleasant experience for the user.  
