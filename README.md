@@ -4,6 +4,7 @@ This project encapsulates every project I have made throughout my education and 
 It's purpose it so get to know me better through both my work and my hobbies.  
 
 **Project Link:** https://artvax0.github.io/portfolio/  
+
 ![Project Thumbnail](/images/portfolioThumbnail.png)
 
 ## How it's made
@@ -20,10 +21,10 @@ The portfolio will be updated periodically with new projects and will change the
 
 At the current moment the portfolio holds one type of project cards; landing pages.  
 The decision to make landing pages in the portfolio was during my education journey and was used as a way to improve my skills in HTML, CSS, SASS, and Bootstrap, explore how I have improved over time and learn new skills on the way.  
-These landing pages all have one core concept; a contact form for the user to leave their information for companies to be able to get new clients, and mobile and laptop responsivity.
+These landing pages all have one core concept; a contact form for the user to leave their information for companies to be able to get new clients, and mobile and laptop responsivity.  
 Seven of the landing pages' designs were introduced to me from our lecturers and were designed and shared to us with **Adobe xD** to learn how to coordinate with designers and work with designs shared over programs like Adobe xD.  
 The mockup designs shared with me can be [found here](https://xd.adobe.com/view/cf02fdda-8ed7-4b86-9342-08c90324af44-9a51/flow/?hints=off).  
-An additional original landing page with design being similar to a few of the mockup designs was designed in mind of 
+An additional original landing page was made in mind with its design being similar to a few of the mockup designs combined, around a specific theme.  
 
 ## Optimizations
 
