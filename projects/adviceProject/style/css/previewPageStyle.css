@@ -11,6 +11,12 @@
     scroll-behavior: smooth;
 }
 
+.wrapper {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+}
+
 /* Header and Nav */
 header nav {
     width: 100vw;
@@ -76,7 +82,7 @@ main {
 }
 
 main #intro .pageIntroduction {
-    background-image: url(../images/abstractBgnByJasonDent.jpg);
+    background-image: url(../../../../images/abstractBgnByJasonDent.jpg);
     background-size: cover;
 }
 
@@ -153,7 +159,7 @@ main .previewContainer {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3em 0;
+    padding: 45px 0;
 }
 
 main .previewContainer .previewWrapper {
@@ -285,6 +291,6 @@ footer {
     }
 
     main .previewContainer {
-        padding: 1em 0;
+        padding: 20px 0;
     }
 }

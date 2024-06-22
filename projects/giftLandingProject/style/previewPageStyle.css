@@ -77,7 +77,7 @@ main {
 
 main #intro .pageIntroduction {
     height: 400px;
-    background-image: url(../images/abstractBgnByJasonDent.jpg);
+    background-image: url(../../../images/abstractBgnByJasonDent.jpg);
     background-size: cover;
 }
 
@@ -153,7 +153,7 @@ main .previewContainer {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3em 0;
+    padding: 45px 0;
 }
 
 main .previewContainer .previewWrapper {
@@ -262,7 +262,29 @@ footer {
     }
 
     /* Introduction */
+    main #intro .skillsList {
+        height: 50px;
+    }
+
+    main #intro .skillsList img {
+        width: 30px;
+    }
+
     .pageInfo {
         padding: 0 25px;
+    }
+
+    main #intro .pageIntroduction .introductionContainer .controls {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main #intro .pageIntroduction .introductionContainer .controls a {
+        margin: 10px 5px;
+    }
+
+    main .previewContainer {
+        padding: 15px 0;
     }
 }

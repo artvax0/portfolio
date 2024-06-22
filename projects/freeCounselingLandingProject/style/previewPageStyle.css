@@ -76,7 +76,7 @@ main {
 }
 
 main #intro .pageIntroduction {
-    background-image: url(../images/abstractBgnByJasonDent.jpg);
+    background-image: url(../../../images/abstractBgnByJasonDent.jpg);
     background-size: cover;
 }
 
@@ -153,7 +153,7 @@ main .previewContainer {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3em 0;
+    padding: 45px 0;
 }
 
 main .previewContainer .previewWrapper {
@@ -285,6 +285,6 @@ footer {
     }
 
     main .previewContainer {
-        padding: 1em 0;
+        padding: 15px 0;
     }
 }
