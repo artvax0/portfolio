@@ -229,6 +229,8 @@ main #intro .skillsList {
 }
 main #intro .skillsList img {
   width: 50px;
+  max-height: 50px;
+  display: block;
 }
 
 main #about > div {

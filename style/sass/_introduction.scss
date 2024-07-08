@@ -60,6 +60,8 @@ main {
             gap: 20px;
             img {
                 width: 50px;
+                max-height: 50px;
+                display: block;
             }
         }
     }
