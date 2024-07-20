@@ -40,6 +40,7 @@
 
 .taskbox-wrapper {
     width: 1200px;
+    margin: 0 15px;
     padding: 5px 15px 15px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.25);
@@ -196,4 +197,20 @@ form input[type='button']:active {
 
 #task-list button:active {
     background-color: #ca3131;
+}
+
+/* Responsive from mobile until tablet */
+
+@media (max-width: 768px) {
+    .taskbox-wrapper {
+        width: 95vw;
+    }
+
+    #input-task {
+        width: 100%
+    }
+
+    #add-task {
+        width: 100%;
+    }
 }
