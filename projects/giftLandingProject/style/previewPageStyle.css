@@ -66,6 +66,11 @@ header nav .links ul li a:hover {
     height: 50px;
     text-align: center;
     font-size: 2rem;
+    cursor: pointer;
+}
+
+#hamburger {
+    display: none;
 }
 
 /* Main Content - Page Introductions */
@@ -243,7 +248,7 @@ footer {
         display: block;
     }
 
-    header nav .hamburger:hover~.links {
+    header nav #hamburger:checked~.links {
         display: block;
     }
 
