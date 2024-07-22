@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/css/main.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <nav class="widget">
+            <ul>
+                <!-- app image -->
+                <li><a href="#"><img src="./images/app-icon.png" alt="App Icon"></a></li>
+
+                <li><a href="#"><img src="./images/weather-icon.png" alt="Weather"></a></li>
+                <li><a href="#" id="settings-btn"><img src="./images/settings-icon.png" alt="Settings"></a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="central-content">
+                <form>
+                    <input id="input-city" class="widget" type="text" placeholder="Search for cities">
+                    <input id="search-city" type="button" value="Display">
+                </form>
+                <div class="header-results">
+                    <div class="current-weather-container">
+                        <div class="header-details">
+                            <h1 id="city">-</h1>
+                            <p id="weather-description">-</p>
+                        </div>
+                        <p id="temperature">-&deg;</p>
+                    </div>
+                    <div class="icon-container">
+                        <img id="weather-icon" src="" alt="">
+                    </div>
+                </div>
+                <div class="widgets-wrapper">
+                    <div class="column-container">
+                        <div class="three-hour-forecast widget">
+                            <h2>Today's forecast</h2>
+                            <div class="five-3-hour-forecast">
+                                <div id="h1" class="forecast-window">
+                                    <p id="h1-time"></p>
+                                    <div class="fc-icon">
+                                        <img id="h1-icon" src="" alt="">
+                                    </div>
+                                    <p id="h1-temp"></p>
+                                </div>
+                                <div id="h4" class="forecast-window">
+                                    <p id="h4-time"></p>
+                                    <div class="fc-icon">
+                                        <img id="h4-icon" src="" alt="">
+                                    </div>
+                                    <p id="h4-temp"></p>
+                                </div>
+                                <div id="h7" class="forecast-window">
+                                    <p id="h7-time"></p>
+                                    <div class="fc-icon">
+                                        <img id="h7-icon" src="" alt="">
+                                    </div>
+                                    <p id="h7-temp"></p>
+                                </div>
+                                <div id="h10" class="forecast-window">
+                                    <p id="h10-time"></p>
+                                    <div class="fc-icon">
+                                        <img id="h10-icon" src="" alt="">
+                                    </div>
+                                    <p id="h10-temp"></p>
+                                </div>
+                                <div id="h13" class="forecast-window">
+                                    <p id="h13-time"></p>
+                                    <div class="fc-icon">
+                                        <img id="h13-icon" src="" alt="">
+                                    </div>
+                                    <p id="h13-temp"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="temperature-details widget">
+                            <h2>Temperatures today</h2>
+                            <div class="gague-wrapper">
+                                <div class="gague">
+                                    <div id="gague"></div>
+                                </div>
+                                <div class="temp-wrapper">
+                                    <p id="min-temp">-&deg;</p>
+                                    <p id="current-temp">-&deg;</p>
+                                    <p id="max-temp">-&deg;</p>
+                                </div>
+                                <div class="icons">
+                                    <div class="i-wrapper">
+                                        <div><img src="./images/snowflake-icon.svg" alt="Snowflake Icon"></div>
+                                        <div><img src="./images/thermostat-icon.svg" alt="Thermostat Icon"></div>
+                                    </div>
+                                    <p>Icons by: SVG Repo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-container">
+                        <div class="day-conditions widget">
+                            <h2>Daily condition</h2>
+                            <div class="conditions-container">
+                                <div class="feels-like">
+                                    <div class="icon">
+                                        <img src="./images/thermostat-icon.svg" alt="Thermostat Icon">
+                                    </div>
+                                    <div class="details">
+                                        <p>Feels Like</p>
+                                        <p id="feels-like">-&deg;</p>
+                                    </div>
+                                </div>
+                                <div class="wind">
+                                    <div class="icon">
+                                        <img src="./images/wind-icon.svg" alt="Wind Icon">
+                                    </div>
+                                    <div class="details">
+                                        <p>Wind</p>
+                                        <p id="wind-speed">-&deg;</p>
+                                    </div>
+                                </div>
+                                <div class="humidity">
+                                    <div class="icon">
+                                        <img src="./images/water-icon.svg" alt="Water Icon">
+                                    </div>
+                                    <div class="details">
+                                        <p>Humidity</p>
+                                        <p id="humidity">-%</p>
+                                    </div>
+                                </div>
+                                <div class="pressure">
+                                    <div class="icon">
+                                        <img src="./images/meter-icon.svg" alt="Meter Icon">
+                                    </div>
+                                    <div class="details">
+                                        <p>Pressure</p>
+                                        <p id="pressure">- hPa</p>
+                                    </div>
+                                </div>
+                                <div class="pollution">
+                                    <div id="pollution-widget">
+                                        <p class="title">Pollution Score</p>
+                                        <p id="pollution-score">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sun-details widget">
+                            <h2>Sunrise and Sunset</h2>
+                            <div class="gague-wrapper">
+                                <div class="sun-gague">
+                                    <div id="sun-gague"></div>
+                                </div>
+                                <div class="sun-wrapper">
+                                    <p id="sunrise">-</p>
+                                    <p id="time">-</p>
+                                    <p id="sunset">-</p>
+                                </div>
+                                <div class="icons">
+                                    <div><img src="./images/sun-icon.svg" alt="Sunrise Icon"></div>
+                                    <div><img src="./images/moon-icon.svg" alt="Sunset Icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <aside id="popup-settings">
+        <div class="settings">
+            <button id="close-settings">X</button>
+            <p>Settings</p>
+            <form class="settings">
+                <div class="units">
+                    <p>Units</p>
+                    <div>
+                        <input type="radio" id="metrics" name="units">
+                        <label for="metrics">Metrics</label>
+                        <input type="radio" name="units" id="imperials">
+                        <label for="imperials">Imperials</label>
+                    </div>
+                </div>
+                <div class="screen-mode">
+                    <p>Color Scheme</p>
+                    <div>
+                        <input type="radio" id="light" name="screen-mode">
+                        <label for="light">Light</label>
+                        <input type="radio" name="screen-mode" id="dark">
+                        <label for="dark">Dark</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </aside>
+
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>

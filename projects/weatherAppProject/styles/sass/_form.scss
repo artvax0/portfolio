@@ -1,0 +1,49 @@
+.central-content {
+    form {
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        height: 40px;
+
+        @include tablet {
+            gap: 10px;
+        }
+
+        .widget {
+            display: flex;
+            border: none;
+            width: 90%;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            padding: 10px;
+
+            @include tablet {
+                width: 75%;
+            }
+        }
+
+        input[type='button'] {
+            border: none;
+            width: 10%;
+            border-radius: 15px;
+            background-color: var(--btn-bgc);
+            padding: 10px;
+            font-size: 1rem;
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-bold);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
+            @include tablet {
+                width: 25%;
+            }
+
+            &:hover {
+                background-color: var(--btn-bgc-hover);
+            }
+
+            &:active {
+                background-color: var(--btn-bgc-active);
+            }
+        }
+    }
+}

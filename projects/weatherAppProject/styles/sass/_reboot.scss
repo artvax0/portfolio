@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin mobile {
+    @media (max-width: 576px) { 
+        @content;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin tablet {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+
+:root {
+    --bgc-1: #3c39c5;
+    --bgc-2: #77d0d3;
+    --bgc-3: #c2d2f5;
+    --widget-bgc: rgba(227, 232, 243, 0.8);
+    --btn-bgc: #32a2fd;
+    --btn-bgc-hover: #5cb5fd;
+    --btn-bgc-active: #356dd6;
+    --font-weight-light: 300;
+    --font-weight-bold: 600;
+    --font-size-normal: 1.2rem;
+    --font-size-header2: 1.5rem;
+    --font-size-header1: 3rem;
+    --font-size-giant: 8rem;
+    --font-family: Assistant, sans-serif;
+    // Pollution Widget
+    --pollution-widget-bgc-1: rgba(227, 232, 243, 0.8);
+    --pollution-widget-bgc-2: rgba(227, 232, 243, 0.8);
+    --pollution-widget-bgc-3: rgba(227, 232, 243, 0.8);
+    --pollution-widget-bgc-4: rgba(227, 232, 243, 0.8);
+
+    @include tablet {
+        --font-size-header1: 2rem;
+        --font-size-giant: 5rem;
+    }
+}
+
+@mixin gradient {
+    background: linear-gradient(-45deg, var(--pollution-widget-bgc-1), var(--pollution-widget-bgc-2), var(--pollution-widget-bgc-3), var(--pollution-widget-bgc-4));
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
