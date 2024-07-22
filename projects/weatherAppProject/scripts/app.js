@@ -53,7 +53,7 @@ async function forecastAPIHandler(weatherData) {
 
 async function pullutionAPIHandler(weatherData) {
     try {
-        let response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=${key}`)
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=${key}`)
         let pollutionData = await response.json();
         
         displayPullutionInfo(pollutionData);
