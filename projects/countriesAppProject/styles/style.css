@@ -1,0 +1,16 @@
+* {
+    direction: ltr !important;
+}
+
+.card-img-top {
+    display: block;
+    height: 35%;
+}
+
+.bi {
+    cursor: pointer;
+}
+
+.bi-heart-fill {
+    color: #fc4d4d;
+}
