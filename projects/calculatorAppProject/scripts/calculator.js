@@ -29,15 +29,15 @@ export class Calculator {
         }
         switch (this.operator) {
             case '+':
-                this.currentValue += this.previousValue;
+                this.currentValue = this.previousValue + this.currentValue;
                 break;
             
             case '-':
-                this.currentValue -= this.previousValue;
+                this.currentValue = this.previousValue - this.currentValue;
                 break;
 
             case '*':
-                this.currentValue *= this.previousValue;
+                this.currentValue = this.previousValue * this.currentValue;
                 break;
 
             case '/':
@@ -45,7 +45,7 @@ export class Calculator {
                     console.error('Cannot divide by zero');
                     this.currentValue = 0;
                 } else {
-                    this.currentValue /= this.previousValue;
+                    this.currentValue = this.previousValue / this.currentValue;
                 }
                 
             default:
