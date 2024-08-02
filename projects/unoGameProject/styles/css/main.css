@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  gap: 20px;
+}
+
+#card-pile {
+  width: 250px;
+  height: 350px;
+  border-radius: 25px;
+  font-size: 6rem;
+}
+
+#player1-cards {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+#player1-cards .card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#player1-cards .card:hover {
+  transform: scale(1.2);
+}
+
+#player2-cards {
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 10px;
+}
+#player2-cards .card {
+  width: 150px;
+  height: 100px;
+}
+
+#player3-cards {
+  position: fixed;
+  top: 0;
+  display: flex;
+  gap: 5px;
+  padding-top: 10px;
+}
+
+#player4-cards {
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 10px;
+}
+#player4-cards .card {
+  width: 150px;
+  height: 100px;
+}
+
+#deck {
+  background-color: lightgrey;
+  width: 200px;
+  height: 275px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 500px;
+  margin: auto;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+#deck:hover {
+  box-shadow: 0 0 25px rgb(119, 119, 119);
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+#popup-wrapper {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#popup-wrapper .popup {
+  width: 25%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  gap: 20px;
+}
+#popup-wrapper .popup h1 {
+  font-size: 4rem;
+}
+#popup-wrapper .popup #text-winner {
+  font-size: 2rem;
+}
+#popup-wrapper .popup #restart-btn {
+  background-color: #91f87d;
+}
+#popup-wrapper .popup .btn {
+  width: 150px;
+  padding: 5px;
+  text-decoration: none;
+  border: none;
+  background-color: lightblue;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+#popup-wrapper .popup .btn:hover {
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    gap: 20px;
+}
+
+#card-pile {
+    width: 250px;
+    height: 350px;
+    border-radius: 25px;
+    font-size: 6rem;
+}
+
+#player1-cards {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    gap: 15px;
+    padding-bottom: 20px;
+
+
+    .card {
+        cursor: pointer;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+#player2-cards {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 10px;
+
+    .card {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+#player3-cards {
+    position: fixed;
+    top: 0;
+    display: flex;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+#player4-cards {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+
+    .card {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+#deck {
+    background-color: lightgrey;
+    width: 200px;
+    height: 275px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 500px;
+    margin: auto;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    &:hover {
+        box-shadow: 0 0 25px rgb(119, 119, 119);
+    }
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
