@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/css/main.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <div class="menu">
+            <h1>UNO!</h1>
+            <h2>The Card Game</h2>
+            <a href="./index.html">Start Game</a>
+            <button id="settings-btn">Settings</button>
+        </div>
+    </main>
+    <aside id="settings">
+        <div class="settings-menu">
+            <button id="close-btn">X</button>
+            <h1>Settings</h1>
+            <form>
+                <div>
+                    <label for="plr-name">Player Name</label>
+                    <input id="plr-name" type="text" placeholder="Player 1" maxlength="20">
+                </div>
+                <input id='save-settings-btn' type="button" value="Save Settings">
+            </form>
+        </div>
+    </aside>
+    <script type="module" src="./scripts/menu.js"></script>
+</body>
+
+</html>

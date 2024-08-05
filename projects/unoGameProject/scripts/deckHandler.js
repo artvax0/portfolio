@@ -1,6 +1,4 @@
 // Import
-// import { updateDOM } from "./domBuilder.js";
-
 import { game } from "./app.js";
 
 // Card Handling

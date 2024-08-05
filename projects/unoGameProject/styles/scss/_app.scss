@@ -20,12 +20,16 @@ body {
     bottom: 0;
     display: flex;
     gap: 15px;
-    padding-bottom: 20px;
-
+    padding: 0 15px 20px;
+    max-width: 1000px;
+    height: 200px;
+    align-items: flex-end;
+    overflow-x: auto;
 
     .card {
         cursor: pointer;
         transition: transform 0.2s;
+        min-width: 100px;
 
         &:hover {
             transform: scale(1.2);
@@ -42,8 +46,8 @@ body {
     padding-right: 10px;
 
     .card {
-        width: 150px;
-        height: 100px;
+        width: 125px;
+        height: 75px;
     }
 }
 
@@ -53,6 +57,11 @@ body {
     display: flex;
     gap: 5px;
     padding-top: 10px;
+
+    .card {
+        width: 75px;
+        height: 125px;
+    }
 }
 
 #player4-cards {
@@ -64,8 +73,8 @@ body {
     padding-left: 10px;
 
     .card {
-        width: 150px;
-        height: 100px;
+        width: 125px;
+        height: 75px;
     }
 }
 
@@ -94,4 +103,97 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+    font-family: var(--font-family);
+}
+
+.player1-info {
+    position: fixed;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#player1-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+#player1-count {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: var(--font-family);
+}
+
+.player2-info {
+    position: fixed;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#player2-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+#player2-count {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: var(--font-family);
+}
+
+.player3-info {
+    position: fixed;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#player3-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+#player3-count {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: var(--font-family);
+}
+
+.player4-info {
+    position: fixed;
+    left: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#player4-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+}
+
+#player4-count {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 5px;
+    font-family: var(--font-family);
 }

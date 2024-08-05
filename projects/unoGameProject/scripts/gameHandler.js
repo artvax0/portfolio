@@ -1,16 +1,27 @@
 // Import
 import { CardManager } from "./deckHandler.js";
-// import { updateDOM } from "./domBuilder.js";
+import { loadSettings } from "./storageHandler.js";
 
+// game essentials vars
 const cardPile = document.getElementById('card-pile');
 const player1Cards = document.getElementById('player1-cards');
 const player2Cards = document.getElementById('player2-cards');
 const player3Cards = document.getElementById('player3-cards');
 const player4Cards = document.getElementById('player4-cards');
-const deck = document.getElementById('deck')
-const popup = document.getElementById('popup-wrapper')
-const txtWinner = document.getElementById('text-winner')
-const restartBtn = document.getElementById('restart-btn')
+const deck = document.getElementById('deck');
+const popup = document.getElementById('popup-wrapper');
+const txtWinner = document.getElementById('text-winner');
+const restartBtn = document.getElementById('restart-btn');
+// extra additions vars
+const playerSettings = loadSettings();
+const player1Name = document.getElementById('player1-name');
+const player2Name = document.getElementById('player2-name');
+const player3Name = document.getElementById('player3-name');
+const player4Name = document.getElementById('player4-name');
+const player1Count = document.getElementById('player1-count');
+const player2Count = document.getElementById('player2-count');
+const player3Count = document.getElementById('player3-count');
+const player4Count = document.getElementById('player4-count');
 
 export class Game {
     field = new CardManager();
@@ -24,6 +35,16 @@ export class Game {
     // Methods
     startGame() {
         console.debug('Game started...');
+        //assign names to players
+        this.player1.name = playerSettings ? JSON.parse(playerSettings).plrName :'Player 1';
+        this.player2.name = 'Bot 0I';
+        this.player3.name = 'Bot I0';
+        this.player4.name = 'Bot II';
+        player1Name.innerText = this.player1.name;
+        player2Name.innerText = this.player2.name;
+        player3Name.innerText = this.player3.name;
+        player4Name.innerText = this.player4.name;
+        // assign 8 cards to all players
         this.field.newCard();
         for (let i = 0; i < 8; i++) {
             this.player1.newCard();
@@ -87,6 +108,11 @@ export class Game {
             playerCard.style.backgroundColor = 'darkgray';
             player4Cards.appendChild(playerCard);
         })
+        // update DOM deck counter
+        player1Count.innerText = this.player1.deck.length;
+        player2Count.innerText = this.player2.deck.length;
+        player3Count.innerText = this.player3.deck.length;
+        player4Count.innerText = this.player4.deck.length;
     }
 
     // update the field values
@@ -149,16 +175,16 @@ export class Game {
     // check if any of the players won
     checkWinner() {
         if(this.player1.deck.length == 0) {
-            this.endGame('Player 1');
+            this.endGame(this.player1.name);
         }
         if(this.player2.deck.length == 0) {
-            this.endGame('Player 2');
+            this.endGame(this.player2.name);
         }
         if(this.player3.deck.length == 0) {
-            this.endGame('Player 3');
+            this.endGame(this.player3.name);
         }
         if(this.player4.deck.length == 0) {
-            this.endGame('Player 4');
+            this.endGame(this.player4.name);
         }
     }
     // end the game and announce the winner

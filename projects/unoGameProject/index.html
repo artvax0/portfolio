@@ -5,22 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/css/main.css">
 </head>
 
 <body>
     <div id="card-pile" class="card"></div>
     <div id="deck" class="card">DECK</div>
+
+    <!-- Player 1 -->
+    <div class="player1-info">
+        <div id="player1-name">Player 1</div>
+        <div id="player1-count">0</div>
+    </div>
     <div id="player1-cards"></div>
+
+    <!-- Player 2 -->
+    <div class="player2-info">
+        <div id="player2-name">Player 2</div>
+        <div id="player2-count">0</div>
+    </div>
     <div id="player2-cards"></div>
+
+    <!-- Player 3 -->
+    <div class="player3-info">
+        <div id="player3-name">Player 3</div>
+        <div id="player3-count">0</div>
+    </div>
     <div id="player3-cards"></div>
+
+    <!-- Player 4 -->
+    <div class="player4-info">
+        <div id="player4-name">Player 4</div>
+        <div id="player4-count">0</div>
+    </div>
     <div id="player4-cards"></div>
+
+    <!-- Popup wrapper when game is over -->
     <div id="popup-wrapper">
         <div class="popup">
             <h1>Game Over!</h1>
             <p id="text-winner"></p>
             <button id="restart-btn" class="btn">Restart Game</button>
-            <a href="/" class="btn">Return Home</a>
+            <a href="./menu.html" class="btn">Return Home</a>
         </div>
     </div>
     <script type="module" src="./scripts/app.js"></script>

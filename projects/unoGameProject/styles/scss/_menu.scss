@@ -1,0 +1,157 @@
+.wrapper {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 350px;
+        height: 400px;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 5px 10px rgba(100, 100, 100, .5);
+        padding: 20px;
+
+        h1 {
+        font-size: 3rem;
+        font-family: var(--font-family);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-family: var(--font-family);
+        }
+
+        a,
+        #settings-btn {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            text-align: center;
+            font-size: 1rem;
+            font-family: var(--font-family);
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        a {
+            background-color: #70d850;
+
+            &:hover {
+                background-color: #a4fc98;
+            }
+
+            &:active {
+                background-color: #52a838;
+            }
+        }
+
+        #settings-btn {
+            background-color: #69aefd;
+
+            &:hover {
+                background-color: #9fd9ff;
+            }
+
+            &:active {
+                background-color: #3f78e0;
+            }
+        }
+    }
+}
+
+#settings {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .settings-menu {
+        position: relative;
+        background-color: #fff;
+        width: 250px;
+        height: 175px;
+        border-radius: 25px;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: 0 3px 7px rgba(50, 50, 50, .65);
+
+        #close-btn {
+            position: absolute;
+            color: red;
+            top: 0;
+            right: 0;
+            margin: 10px 10px 0 0;
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: var(--font-family);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                label {
+                    font-family: var(--font-family);
+                    font-size: 1rem;
+                }
+
+                input {
+                    padding: 5px;
+                    font-family: var(--font-family);
+                    font-size: 1rem;
+                }
+            }
+
+            #save-settings-btn {
+                border: none;
+                background-color: #3EB489;
+                padding: 5px;
+                border-radius: 5px;
+                font-weight: bold;
+                color: #fff;
+                font-family: var(--font-family);
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #54d6b6;
+                }
+
+                &:active {
+                    background-color: #2e9c6f;
+                }
+            }
+        }
+    }
+}
