@@ -1,32 +1,38 @@
 const key = `7c20d82b68eb90db48e68d108925b614`;
-/*
-let units = 'metric';
-let theme = 'light'
+
+// [ Units Settings ]
+const metricsRadio = document.getElementById('metrics');
+const imperialsRadio = document.getElementById('imperials');
+let units = JSON.parse(loadSettings()) || { units: 'metric' };
+
+function saveSettings(units) {
+    let unit = { units: units }
+    localStorage.setItem('units', JSON.stringify(unit));
+}
 
 function loadSettings() {
-    let data = JSON.parse(localStorage.getItem('settings')) || { units: 'metric', theme: 'light' };
-    
-    if (data.units == 'imperials') {
-        units = 'imperials';
-    }
-    if (data.theme == 'dark') {
-        theme = 'dark';
-    }
+    return localStorage.getItem('units');
 }
 
-function changeSettings() {
+metricsRadio.addEventListener('change', () => {
+    saveSettings('metric');
+    units = JSON.parse(loadSettings());
+});
 
+imperialsRadio.addEventListener('change', () => {
+    saveSettings('imperial');
+    units = JSON.parse(loadSettings());
+});
+
+if (units.units == 'metric') {
+    metricsRadio.checked = true;
+} else {
+    imperialsRadio.checked = true;
 }
 
-function saveSettings() {
-    let data = { units: units, theme: theme };
-    localStorage.setItem('settings', JSON.stringify(data));
-}
-
-*/
 async function weatherAPIHandler(cityName) {
     try {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=${units.units}`);
         let weatherData = await response.json();
 
         console.log(weatherData);
@@ -41,7 +47,7 @@ async function weatherAPIHandler(cityName) {
 
 async function forecastAPIHandler(weatherData) {
     try {
-        let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=${key}&units=metric`);
+        let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${weatherData.coord.lat}&lon=${weatherData.coord.lon}&appid=${key}&units=${units.units}`);
         let forecastData = await response.json();
 
         console.log(forecastData);
@@ -81,12 +87,12 @@ function displayWeatherInfo(weatherData) {
 
     city.innerText = `${weatherData.name}, ${weatherData.sys.country}`;
     // get one decimal digit after
-    temp.innerText = `${Math.round(weatherData.main.temp * 10) / 10}°`;
-    currentTemp.innerText = `Current Temp: ${Math.round(weatherData.main.temp * 10) / 10}°`;
-    feelsLike.innerText = `${Math.round(weatherData.main.feels_like * 10) / 10}°`;
+    temp.innerText = `${Math.round(weatherData.main.temp * 10) / 10}°${units.units == 'metric' ? 'C' : 'F'}`;
+    currentTemp.innerText = `Current Temp: ${Math.round(weatherData.main.temp * 10) / 10}°${units.units == 'metric' ? 'C' : 'F'}`;
+    feelsLike.innerText = `${Math.round(weatherData.main.feels_like * 10) / 10}°${units.units == 'metric' ? 'C' : 'F'}`;
 
-    maxTemp.innerText = `${Math.round(weatherData.main.temp_max * 10) / 10}°`;
-    minTemp.innerText = `${Math.round(weatherData.main.temp_min * 10) / 10}°`;
+    maxTemp.innerText = `${Math.round(weatherData.main.temp_max * 10) / 10}°${units.units == 'metric' ? 'C' : 'F'}`;
+    minTemp.innerText = `${Math.round(weatherData.main.temp_min * 10) / 10}°${units.units == 'metric' ? 'C' : 'F'}`;
 
     /* GAGUE SYSTEM */
     const tempGague = document.getElementById('gague');
@@ -116,7 +122,7 @@ function displayWeatherInfo(weatherData) {
     weatherDescription.innerText = `${weatherData.weather[0].main}, ${weatherData.weather[0].description}`;
     weatherIcon.src = `./images/${weatherData.weather[0].icon}.svg`;
 
-    windSpeed.innerText = `${weatherData.wind.speed}`;
+    windSpeed.innerText = `${weatherData.wind.speed} ${units.units == 'metric' ? 'm/s' : 'mph'}`;
 
     humidity.innerText = `${weatherData.main.humidity}%`;
     pressure.innerText = `${weatherData.main.pressure} hPa`;
@@ -165,11 +171,11 @@ function displayForecastInfo(forecastData) {
     h10Icon.src = `./images/${forecastData.list[3].weather[0].icon}.svg`;
     h13Icon.src = `./images/${forecastData.list[4].weather[0].icon}.svg`;
 
-    h1Temp.innerText = `${forecastData.list[0].main.temp}°`
-    h4Temp.innerText = `${forecastData.list[1].main.temp}°`
-    h7Temp.innerText = `${forecastData.list[2].main.temp}°`
-    h10Temp.innerText = `${forecastData.list[3].main.temp}°`
-    h13Temp.innerText = `${forecastData.list[4].main.temp}°`
+    h1Temp.innerText = `${forecastData.list[0].main.temp}°${units.units == 'metric' ? 'C' : 'F'}`
+    h4Temp.innerText = `${forecastData.list[1].main.temp}°${units.units == 'metric' ? 'C' : 'F'}`
+    h7Temp.innerText = `${forecastData.list[2].main.temp}°${units.units == 'metric' ? 'C' : 'F'}`
+    h10Temp.innerText = `${forecastData.list[3].main.temp}°${units.units == 'metric' ? 'C' : 'F'}`
+    h13Temp.innerText = `${forecastData.list[4].main.temp}°${units.units == 'metric' ? 'C' : 'F'}`
 }
 
 function displayPullutionInfo(pollutionData) {

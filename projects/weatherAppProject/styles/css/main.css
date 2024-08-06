@@ -29,6 +29,7 @@
   :root {
     --font-size-header1: 2rem;
     --font-size-giant: 5rem;
+    --font-size-header2: 1rem;
   }
 }
 
@@ -640,7 +641,7 @@ nav ul img[alt="App Icon"] {
 #popup-settings .settings {
   background-color: #eee;
   width: 350px;
-  height: 400px;
+  height: 160px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
