@@ -66,6 +66,95 @@ document.getElementById('equals').addEventListener('click', () => {
     updateDisplay();
 });
 
+// keyboard detection
+document.addEventListener('keydown',(e) => {
+    console.log(e);
+    
+    switch (e.key) {
+        case '0':
+            calculator.inputNum(0);
+            updateDisplay();
+            break;
+
+        case '1':
+            calculator.inputNum(1);
+            updateDisplay();
+            break;
+        
+        case '2':
+            calculator.inputNum(2);
+            updateDisplay();
+            break;
+
+        case '3':
+            calculator.inputNum(3);
+            updateDisplay();
+            break;
+            
+        case '4':
+            calculator.inputNum(4);
+            updateDisplay();
+            break;
+            
+        case '5':
+            calculator.inputNum(5);
+            updateDisplay();
+            break;
+            
+        case '6':
+            calculator.inputNum(6);
+            updateDisplay();
+            break;
+            
+        case '7':
+            calculator.inputNum(7);
+            updateDisplay();
+            break;
+            
+        case '8':
+            calculator.inputNum(8);
+            updateDisplay();
+            break;
+
+        case '9':
+            calculator.inputNum(9);
+            updateDisplay();
+            break;
+            
+        case 'Backspace':
+            calculator.clear();
+            updateDisplay();
+            break;
+            
+        case '+':
+            calculator.setOperator('+');
+            updateDisplay();
+            break;
+
+        case '-':
+            calculator.setOperator('-');
+            updateDisplay();
+            break;
+
+        case '*':
+            calculator.setOperator('*');
+            updateDisplay();
+            break;
+
+        case '/':
+            calculator.setOperator('/');
+            updateDisplay();
+            break;
+
+        case 'Enter' || '=':
+            calculator.calculate();
+            updateDisplay();
+
+        default:
+            break;
+    }
+})
+
 function updateDisplay() {
     document.getElementById('display').innerHTML = calculator.getResult();
 }
