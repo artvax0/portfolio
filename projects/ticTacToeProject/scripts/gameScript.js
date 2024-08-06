@@ -1,6 +1,9 @@
-import { getWinnerLog, winnerLog } from "./storage.js";
+import { getWinnerLog, loadPlayerNames, winnerLog } from "./storage.js";
 
 const subtitle = document.querySelector('.subtitle');
+const plrNames = loadPlayerNames();
+const plr1 = plrNames.plr1;
+const plr2 = plrNames.plr2;
 let currentPlayer = 'X';
 let board = ['', '', '', '', '', '', '', '', ''];
 
@@ -15,7 +18,11 @@ const winPatterns = [
     [0, 4, 8] // ^ Diagonals
 ];
 
-subtitle.innerHTML = `It is ${currentPlayer}'s turn`;
+const getCurrentPlayer = () => {
+    return currentPlayer == 'X' ? plr1 : plr2;
+}
+
+subtitle.innerHTML = `It is ${getCurrentPlayer()}'s turn`;
 
 document.querySelectorAll('.cell').forEach((cell, index, fullBoard) => cell.addEventListener('click', () => {
         makeMove(cell, index, fullBoard);
@@ -27,11 +34,11 @@ function makeMove(cell, cellIndex, fullBoard) {
         board[cellIndex] = currentPlayer;
         cell.innerHTML = currentPlayer;
         if (checkWinner() == true) {
-            subtitle.innerHTML = `The winner is ${currentPlayer}`;
+            subtitle.innerHTML = `The winner is ${getCurrentPlayer()}`;
             const winningPattern = winPatterns.find(pattern => pattern.every(index => board[index] == currentPlayer)); //find the pattern and return said pattern (not boolean)
             winningPattern.forEach(cellIndex => fullBoard[cellIndex].style.backgroundColor = 'rgb(107 180 255)'); // compare the pattern's values as the index of original cellboard's array to mark the winning cells.
             const log = getWinnerLog();
-            const winner = { timeOfWin: new Date(), winner: currentPlayer};
+            const winner = { timeOfWin: new Date(), winner: getCurrentPlayer()};
             log.push(winner);
             winnerLog(log);
             return;
@@ -41,7 +48,7 @@ function makeMove(cell, cellIndex, fullBoard) {
             return;
         }
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X'; // Toggle turn
-        subtitle.innerHTML = `It is ${currentPlayer}'s turn`
+        subtitle.innerHTML = `It is ${getCurrentPlayer()}'s turn`
     }
 }
 
@@ -53,7 +60,7 @@ function checkWinner() {
 
 document.getElementById('restart').addEventListener('click', () => {
     board.forEach((_,index) => board[index] = ''); 
-    subtitle.innerHTML = `It is ${currentPlayer}'s turn`;
+    subtitle.innerHTML = `It is ${getCurrentPlayer()}'s turn`;
     document.querySelectorAll('.cell').forEach((cell)  => {
         cell.innerHTML = '';
         cell.style.backgroundColor = '';
