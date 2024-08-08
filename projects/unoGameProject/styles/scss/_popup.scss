@@ -21,14 +21,18 @@
 
         h1 {
             font-size: 4rem;
+            font-family: var(--font-family);
         }
 
         #text-winner {
             font-size: 2rem;
+            font-family: var(--font-family);
+            text-align: center;
         }
 
         #restart-btn{
             background-color: #91f87d;
+            font-family: var(--font-family);
         }
 
         .btn {
@@ -44,6 +48,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: box-shadow 0.2s;
+            font-family: var(--font-family);
 
             &:hover {
                 box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);

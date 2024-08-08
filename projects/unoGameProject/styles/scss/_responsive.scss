@@ -1,0 +1,228 @@
+@media (max-width: 1024px) and (orientation: landscape) {
+    #card-pile {
+        width: 90px;
+        height: 125px;
+        font-size: 3rem;
+        border-radius: 10px;
+    }
+
+    #deck {
+        width: 90px;
+        height: 125px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        left: 250px;
+    }
+
+    #player1-cards {
+        max-width: 700px;
+        height: 100px;
+        .card {
+            min-width: 50px;
+            max-width: 50px;
+            height: 75px;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+    }
+
+    #player3-cards {
+        .card {
+            width: 50px;
+            height: 75px;
+            border-radius: 10px;
+        }
+    }
+
+    #player2-cards,
+    #player4-cards {
+        gap: 5px;
+        .card {
+            width: 50px;
+            height: 30px;
+            border-radius: 7px;
+        }
+    }
+
+    .player1-info,
+    .player2-info,
+    .player3-info,
+    .player4-info {
+        gap: 0;
+    }
+
+    #player1-name,
+    #player1-count,
+    #player2-name,
+    #player2-count,
+    #player3-name,
+    #player3-count,
+    #player4-name,
+    #player4-count {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .player1-info {
+        bottom: 100px;
+    }
+
+    .player2-info {
+        right: 80px;
+    }
+
+    .player3-info {
+        top: 90px;
+    }
+
+    .player4-info {
+        left: 80px;
+    }
+
+    .wrapper {
+
+    .menu {
+        height: 300px;
+    }
+}
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+    #card-pile,
+    #deck {
+        width: 70px;
+        height: 100px;
+    }
+
+    #player1-name,
+    #player1-count,
+    #player2-name,
+    #player2-count,
+    #player3-name,
+    #player3-count,
+    #player4-name,
+    #player4-count {
+        font-size: 0.75rem;
+    }
+
+    #player1-cards {
+        padding: 0 15px 5px;
+        max-width: 540px;
+    }
+
+    #popup-wrapper{
+        .popup {
+            width: 70%;
+            height: 80%;
+            gap: 30px;
+            #text-winner {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// Don't allow portrait mode unless its iPads with large screens.
+@media (max-width: 1020px) and (orientation: portrait) {
+    body {
+        background-color: #000;
+
+        #portrait-text {
+            display: block;
+            color: #fff;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #deck,
+        #card-pile,
+        .player1-info,
+        .player2-info,
+        .player3-info,
+        .player4-info,
+        #player1-cards,
+        #player2-cards,
+        #player3-cards,
+        #player4-cards { 
+            display: none;
+        }
+    }
+}
+
+// Galaxy Fold Responsiveness
+@media (max-width: 300px) and (orientation: portrait) {
+    .wrapper {
+        .menu {
+            width: 250px;
+
+            a,
+            #settings-btn {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media (max-height: 300px) and (orientation: landscape) {
+    #card-pile, #deck {
+        width: 50px;
+        height: 75px;
+        font-size: 2rem;
+    }
+
+    #deck {
+        font-size: 1rem;
+    }
+
+    #player1-cards {
+        max-width: 500px;
+        height: 75px;
+        .card {
+            min-width: 45px;
+            max-width: 45px;
+            height: 65px;
+        }
+    }
+
+    #player2-cards .card,
+    #player4-cards .card {
+        width: 40px;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    #player3-cards .card {
+        width: 40px;
+        height: 65px;
+    }
+
+    .player1-info {
+        bottom: 75px;
+    }
+
+    .player2-info {
+        right: 70px;
+    }
+
+    .player3-info {
+        top: 75px;
+    }
+
+    .player4-info {
+        left: 70px;
+    }
+
+    #popup-wrapper{
+        .popup {
+            gap: 10px;
+        }
+    }
+
+    .wrapper {
+        .menu {
+            height: 250px;
+        }
+    }
+}
