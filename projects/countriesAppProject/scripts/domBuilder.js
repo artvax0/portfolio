@@ -26,9 +26,29 @@ export const createCard = (country, isFavourite = false) => {
     cardTitle.className = 'card-title';
     cardTitle.innerText = country.name.common;
 
+    const capitals = document.createElement('p');
+    capitals.className = 'card-text';
+    capitals.innerHTML = `<strong>Capitals:</strong> ${country.capital ? country.capital.map(capital => capital).join(', ') : 'None'}`;
+
     const population = document.createElement('p');
     population.className = 'card-text';
-    population.innerText = `Population: ${country.population.toLocaleString()}`;
+    population.innerHTML = `<strong>Population:</strong> ${country.population.toLocaleString()}`;
+
+    const independence = document.createElement('p');
+    independence.className = 'card-text';
+    independence.innerHTML = `<strong>Independent:</strong> ${country.independent ? 'True' : 'False'}`;
+
+    const unMember = document.createElement('p');
+    unMember.className = 'card-text';
+    unMember.innerHTML = `<strong>UN Member:</strong> ${country.unMember ? 'True' : 'False'}`;
+
+    const languages = document.createElement('p');
+    languages.className = 'card-text';
+    languages.innerHTML = `<strong>Langauges:</strong> ${country.languages ? Object.values(country.languages).join(', ') : 'None'}`;
+
+    const currencies = document.createElement('p');
+    currencies.className = 'card-text';
+    currencies.innerHTML = `<strong>Currencies:</strong> ${country.currencies ? Object.keys(country.currencies).join(', ') : 'None'}`;
 
     const cardFooter = document.createElement('div');
     cardFooter.className = 'card-footer mb-2 d-flex justify-content-center';
@@ -47,8 +67,13 @@ export const createCard = (country, isFavourite = false) => {
         }
     })
 
-    cardBody.appendChild(cardTitle)
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(capitals);
     cardBody.appendChild(population);
+    cardBody.appendChild(languages);
+    cardBody.appendChild(currencies);
+    cardBody.appendChild(independence);
+    cardBody.appendChild(unMember);
     cardFooter.appendChild(heart);
     card.appendChild(cardImg);
     card.appendChild(cardBody);
