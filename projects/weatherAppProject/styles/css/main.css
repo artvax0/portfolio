@@ -667,32 +667,26 @@ nav ul img[alt="App Icon"] {
   font-weight: var(--font-weight-bold);
   text-align: center;
 }
-#popup-settings .settings .units,
-#popup-settings .settings .screen-mode {
+#popup-settings .settings .units {
   display: flex;
   flex-direction: column;
 }
-#popup-settings .settings .units p,
-#popup-settings .settings .screen-mode p {
+#popup-settings .settings .units p {
   font-size: var(--font-size-header2);
 }
-#popup-settings .settings .units div,
-#popup-settings .settings .screen-mode div {
+#popup-settings .settings .units div {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
-#popup-settings .settings .units div input,
-#popup-settings .settings .screen-mode div input {
+#popup-settings .settings .units div input {
   display: none;
 }
-#popup-settings .settings .units div input:checked + label,
-#popup-settings .settings .screen-mode div input:checked + label {
+#popup-settings .settings .units div input:checked + label {
   background-color: #428eed;
   color: #fff;
 }
-#popup-settings .settings .units div label,
-#popup-settings .settings .screen-mode div label {
+#popup-settings .settings .units div label {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -700,4 +694,5 @@ nav ul img[alt="App Icon"] {
   padding: 5px 15px;
   text-align: center;
   font-family: var(--font-family);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
