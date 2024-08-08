@@ -71,6 +71,7 @@ main {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        flex-grow: 1;
                         h4 {
                             font-family: $fontFamilyNormal;
                             font-size: $fontSizeNormal;
