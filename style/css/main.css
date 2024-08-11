@@ -227,10 +227,21 @@ main #intro .skillsList {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 576px) {
+  main #intro .skillsList {
+    height: 50px;
+  }
+}
 main #intro .skillsList img {
   width: 50px;
   max-height: 50px;
   display: block;
+}
+@media (max-width: 576px) {
+  main #intro .skillsList img {
+    width: 25px;
+    max-height: 25px;
+  }
 }
 
 main #about > div {
@@ -363,6 +374,7 @@ main #gallery .galleryInfo h3 {
   font-family: "Teko", sans-serif;
   font-size: 1.2rem;
   font-weight: 450;
+  text-align: center;
 }
 main #gallery .galleryCards {
   width: 900px;
