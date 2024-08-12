@@ -234,4 +234,9 @@ document.getElementById('settings-btn').addEventListener('click', () => {
 
 document.getElementById('close-settings').addEventListener('click', () => {
     document.getElementById('popup-settings').style.display = `none`;
+    weatherAPIHandler(document.getElementById('input-city').value);
 });
+
+// Initial load
+document.getElementById('input-city').value = 'Tel Aviv';
+weatherAPIHandler(document.getElementById('input-city').value);
