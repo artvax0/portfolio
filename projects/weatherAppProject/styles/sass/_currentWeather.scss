@@ -10,6 +10,11 @@
         padding: 0 25px;
     }
 
+    @include laptop {
+        height: calc(((100%) - 65px) / 4);
+        padding: 0 50px;
+    }
+
     .current-weather-container {
         width: 70%;
         display: flex;

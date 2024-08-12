@@ -19,6 +19,12 @@
     }
 }
 
+@mixin laptop {
+    @media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+        @content;
+    } 
+}
+
 
 :root {
     --bgc-1: #3c39c5;
@@ -45,6 +51,13 @@
         --font-size-header1: 2rem;
         --font-size-giant: 5rem;
         --font-size-header2: 1rem;
+    }
+
+    @include laptop {
+        --font-size-header1: 2rem;
+        --font-size-giant: 3rem;
+        --font-size-header2: 1.3rem;
+        --font-weight-bold: 500;
     }
 }
 

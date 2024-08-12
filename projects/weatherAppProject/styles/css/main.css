@@ -32,6 +32,14 @@
     --font-size-header2: 1rem;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  :root {
+    --font-size-header1: 2rem;
+    --font-size-giant: 3rem;
+    --font-size-header2: 1.3rem;
+    --font-weight-bold: 500;
+  }
+}
 
 @keyframes gradient-animation {
   0% {
@@ -61,6 +69,12 @@
     gap: 10px;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .page-wrapper {
+    gap: 10px;
+    padding: 10px;
+  }
+}
 
 nav {
   width: 125px;
@@ -75,6 +89,12 @@ nav {
 @media (max-width: 576px) {
   nav {
     height: 50px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  nav {
+    height: auto;
+    width: 100px;
   }
 }
 
@@ -103,6 +123,11 @@ main {
     gap: 10px;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .central-content {
+    gap: 10px;
+  }
+}
 
 .widgets-wrapper {
   height: 100%;
@@ -112,6 +137,11 @@ main {
   justify-content: space-between;
 }
 @media (max-width: 992px) {
+  .widgets-wrapper {
+    gap: 10px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
   .widgets-wrapper {
     gap: 10px;
   }
@@ -179,13 +209,13 @@ nav ul img {
 }
 @media (max-width: 992px) {
   nav ul img {
-    width: 25%;
+    width: 15%;
     padding: 0;
   }
 }
 @media (max-width: 576px) {
   nav ul img {
-    width: 30%;
+    width: 20%;
   }
 }
 nav ul img[alt="App Icon"] {
@@ -257,6 +287,12 @@ nav ul img[alt="App Icon"] {
     padding: 0 25px;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .header-results {
+    height: calc((100% - 65px) / 4);
+    padding: 0 50px;
+  }
+}
 .header-results .current-weather-container {
   width: 70%;
   display: flex;
@@ -309,6 +345,11 @@ nav ul img[alt="App Icon"] {
     width: 100%;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .three-hour-forecast {
+    padding: 10px;
+  }
+}
 .three-hour-forecast h2 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-light);
@@ -334,6 +375,11 @@ nav ul img[alt="App Icon"] {
   justify-content: center;
   align-items: center;
   height: 100px;
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .three-hour-forecast .five-3-hour-forecast .forecast-window .fc-icon {
+    height: 75px;
+  }
 }
 .three-hour-forecast .five-3-hour-forecast .forecast-window .fc-icon img {
   display: block;
@@ -364,6 +410,11 @@ nav ul img[alt="App Icon"] {
 @media (max-width: 992px) {
   .day-conditions {
     width: 100%;
+  }
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .day-conditions {
+    padding: 10px;
   }
 }
 .day-conditions h2 {
@@ -479,6 +530,11 @@ nav ul img[alt="App Icon"] {
     width: 100%;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .temperature-details {
+    padding: 10px;
+  }
+}
 .temperature-details h2 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-light);
@@ -493,6 +549,11 @@ nav ul img[alt="App Icon"] {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .temperature-details .gague-wrapper {
+    height: 90%;
+  }
 }
 .temperature-details .gague-wrapper .gague {
   width: 100%;
@@ -541,6 +602,12 @@ nav ul img[alt="App Icon"] {
   width: 30px;
   height: 30px;
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .temperature-details .gague-wrapper .icons .i-wrapper div {
+    width: 25px;
+    height: 25px;
+  }
+}
 .temperature-details .gague-wrapper .icons .i-wrapper div img {
   display: block;
   width: 100%;
@@ -562,6 +629,11 @@ nav ul img[alt="App Icon"] {
     width: 100%;
   }
 }
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .sun-details {
+    padding: 10px;
+  }
+}
 .sun-details h2 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-light);
@@ -576,6 +648,11 @@ nav ul img[alt="App Icon"] {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .sun-details .gague-wrapper {
+    height: 90%;
+  }
 }
 .sun-details .gague-wrapper .sun-gague {
   width: 100%;
@@ -618,6 +695,12 @@ nav ul img[alt="App Icon"] {
 .sun-details .gague-wrapper .icons div {
   width: 30px;
   height: 30px;
+}
+@media (max-width: 1440px) and (min-width: 992px) and (min-height: 575px) {
+  .sun-details .gague-wrapper .icons div {
+    width: 25px;
+    height: 25px;
+  }
 }
 .sun-details .gague-wrapper .icons div img {
   display: block;

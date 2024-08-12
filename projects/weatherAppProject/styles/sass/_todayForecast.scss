@@ -6,6 +6,10 @@
         width: 100%;
     }
 
+    @include laptop {
+        padding: 10px;
+    }
+
     h2 {
         font-family: var(--font-family);
         font-weight: var(--font-weight-light);
@@ -32,6 +36,10 @@
                 justify-content: center;
                 align-items: center;
                 height: 100px;
+
+                @include laptop {
+                    height: 75px;
+                }
 
                 img {
                     display: block;
