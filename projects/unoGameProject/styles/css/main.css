@@ -398,6 +398,71 @@ body {
   background-color: #2e9c6f;
 }
 
+@media (max-width: 1440px) and (min-height: 575px) {
+  #card-pile,
+  #deck {
+    width: 100px;
+    height: 150px;
+    border-radius: 15px;
+    font-size: 4rem;
+  }
+  #deck {
+    left: 250px;
+    font-size: 2.5rem;
+  }
+  #player1-cards {
+    max-width: 900px;
+    height: 175px;
+  }
+  #player1-cards .card {
+    min-width: 80px;
+    max-width: 80px;
+    height: 125px;
+  }
+  #player2-cards,
+  #player4-cards {
+    gap: 5px;
+  }
+  #player2-cards .card,
+  #player4-cards .card {
+    width: 70px;
+    height: 50px;
+    border-radius: 7px;
+  }
+  .player1-info,
+  .player2-info,
+  .player3-info,
+  .player4-info {
+    gap: 0;
+  }
+  #player1-name,
+  #player1-count,
+  #player2-name,
+  #player2-count,
+  #player3-name,
+  #player3-count,
+  #player4-name,
+  #player4-count {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .player1-info {
+    bottom: 175px;
+  }
+  .player2-info {
+    right: 100px;
+  }
+  .player3-info {
+    top: 150px;
+  }
+  .player4-info {
+    left: 100px;
+  }
+  #popup-wrapper .popup {
+    width: 50%;
+    height: 50%;
+  }
+}
 @media (max-width: 1024px) and (orientation: landscape) {
   #card-pile {
     width: 90px;
@@ -471,7 +536,7 @@ body {
     height: 300px;
   }
 }
-@media (max-width: 700px) and (orientation: landscape) {
+@media (max-width: 720px) and (orientation: landscape) {
   #card-pile,
   #deck {
     width: 70px;
