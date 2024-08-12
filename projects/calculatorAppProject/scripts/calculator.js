@@ -63,6 +63,7 @@ export class Calculator {
     }
 
     getResult() {
-        return this.currentValue;
+        if (this.previousValue == 0) return this.currentValue;
+        return `(${this.previousValue}) ${this.operator} ${this.currentValue}`;
     }
 }
