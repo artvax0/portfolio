@@ -85,6 +85,7 @@ const addFavourite = (country) => {
         const favourites = getFavourites();
         favourites.push(country);
         saveFavourites(favourites);
+        createCardList();
 }
 
 const removeFavourite = (country) => {
@@ -92,22 +93,31 @@ const removeFavourite = (country) => {
     // remove favourite country from the country by filtering it out (could've used splice but was easier to filter it away instead of finding it's index)
     favourites = favourites.filter((favouriteCountry) => favouriteCountry.cca3 != country.cca3) || [];
     saveFavourites(favourites);
+    createCardList();
 }
 
 export const createCardList = () => {
+    cards.innerHTML = '';
+    const searchQuery = searchInput.value.trim().toLowerCase();
     const favourites = getFavourites();
     // creating a map with each country code saving the country object itself for better country object comparison for non-favourites
     const favouriteMap = new Map(favourites.map((country) => [country.cca3, country]));
 
     // favourites first
-    for (const country of favourites) {
+    const filteredFavourites = favourites.filter(country => 
+        country.name.common.toLowerCase().includes(searchQuery)
+    );
+
+    for (const country of filteredFavourites) {
         createCard(country, true);
     }
 
     // the rest of countries
-    for (const country of countries) {
-        if (!favouriteMap.has(country.cca3)) {
+    const filteredCountries = countries.filter(country => 
+        !favouriteMap.has(country.cca3) &&
+        country.name.common.toLowerCase().includes(searchQuery)
+    );
+    for (const country of filteredCountries) {
             createCard(country);
         }
-    }
 }
